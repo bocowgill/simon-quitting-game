@@ -44,8 +44,7 @@ automation:
       models: ["GPT-6"]
       framework: "OpenAI Codex"
       tool_setup: >-
-        Bo Cowgill directed the investigation. GPT-6 Codex agents developed the mathematical reductions, the Lean
-        proof, and the exact certificate computations. Lean 4 and Mathlib
+        OpenAI Codex was used in the Lean formalization. Lean 4 and Mathlib
         were used for kernel checks. The numeric inputs are checked in Lean through rational interval
         bounds and a fixed-point argument. Python also generated check data.
 fidelity:
