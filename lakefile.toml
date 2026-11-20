@@ -1,0 +1,84 @@
+name = "simon_quitting"
+defaultTargets = ["Solution"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+globs = [
+  "ActiveRuns",
+  "Affine",
+  "BaseMatching",
+  "CertifiedTable",
+  "ConcreteHazards",
+  "ConcreteInactive",
+  "ConcreteReduction",
+  "CycleBounds",
+  "ExprRelation",
+  "Expressions",
+  "FastCalendar",
+  "FastCheck2",
+  "FastCheck5",
+  "FastExpr",
+  "FastIdentity",
+  "FastJet",
+  "FastPair",
+  "FastPredicates",
+  "FastReal",
+  "FastRelation",
+  "FastRootReduction",
+  "Guarded",
+  "GuardedInterval",
+  "GuardedJet",
+  "HazardBounds",
+  "InactiveCheck",
+  "InactiveChecks",
+  "InactivePropagation",
+  "InactiveRows",
+  "InactiveShard0",
+  "InactiveShard1",
+  "InactiveShard2",
+  "InactiveShard3",
+  "InactiveShard4",
+  "InactiveShard5",
+  "InactiveShard6",
+  "InactiveShard7",
+  "InactiveWitness",
+  "Interval",
+  "IntervalDivision",
+  "PairInterior",
+  "PairStep",
+  "PeriodicEquilibrium",
+  "RootBounds",
+  "RootChecks",
+  "RootConstants",
+  "RootDomain",
+  "RootEnvelope",
+  "RootEnvelopeData",
+  "RootExistence",
+  "SeamQuit",
+  "Secant",
+  "SimonCalendar",
+  "SimonHeadline",
+  "SimonPairMatching",
+  "SimonRoot",
+  "Solution",
+  "Table",
+  "Triple",
+  "TripleBoundary",
+]
+
+[[lean_lib]]
+name = "PeriodicEquilibriumFC"
+globs = ["SimonPeriodic", "ConcreteFC", "PeriodicEquilibriumFC"]
+
+[[lean_lib]]
+name = "FormalConjecturesForMathlib"
+globs = ["FormalConjecturesForMathlib.+"]

@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+project:
+  name: "Periodic equilibria in Simon’s four-player quitting game"
+  description: >-
+    One 1,856-period calendar of independently randomized moves is an exact
+    terminal Nash equilibrium and a uniform Cesàro equilibrium in the
+    four-player quitting game for every live phase.
+  authors: ["OpenAI Codex (AI-assisted research project)"]
+  role: "substantive-development"
+  license: "NOASSERTION"  # Release licence for new material pending owner review.
+classification:
+  arxiv: ["math.OC"]
+  msc2020: ["91A15"]
+sources:
+  - title: "A Topological Approach to Quitting Games"
+    authors: ["Robert Samuel Simon"]
+    id: "https://doi.org/10.1287/moor.1110.0524"
+    type: "paper"
+    relationship: "background"
+    location: "Four-player example in the introduction"
+    note: "Supplies the quitting game and motivates the equilibrium question."
+related_formalizations:
+  - id: "https://github.com/google-deepmind/formal-conjectures/commit/326cddb8eee07ae19c82d4adee81af8288eac55b"
+    relationship: "builds-on"
+    note: "Frozen public-history game definitions used in the separate trajectory-law bridge."
+status:
+  scope: >-
+    Existence of a 1,856-period equilibrium for the displayed four-player
+    example. General finite stochastic games and minimality of the period
+    remain outside its scope.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "SimonHeadline.periodic_equilibrium"
+      file: "PeriodicEquilibrium.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6"]
+      framework: "OpenAI Codex"
+      tool_setup: >-
+        GPT-6 Codex agents developed the mathematical reductions, the Lean
+        proof, and the exact certificate computations. Lean 4 and Mathlib
+        were used for kernel checks. The numeric inputs are checked in Lean through rational interval
+        bounds and a fixed-point argument. Python also generated check data.
+fidelity:
+  divergences: >-
+    The Challenge expresses behavioral profiles at live histories by
+    time-indexed hazards. There is exactly one live history at each date.
+    The included trajectory-law bridge verifies the resulting expectation
+    formulas and the full-strategy interpretation using frozen game definitions.
+review:
+  status: "agent-reviewed"
+  notes: >-
+    The concrete equilibrium theorem passed bounded Lean replays at both the
+    frozen 4.33.1 pin and the packaged 4.35.0 pin. An independent agent
+    checked the faithful encoding of all unilateral deviations and the
+    horizon quantifiers. Local Comparator accepted the exported statements. Con-ron and
+    Nanoda independently accepted the same Solution export. Public registration, human authorship,
+    responsible maintainer, and release licensing await owner review.
