@@ -4,7 +4,7 @@
 
 The Lean theorem is `SimonHeadline.periodic_equilibrium`. Its proof constructs four successive 464-date blocks by rotating the players' roles. Each block begins with three players mixing on one date, followed by 450 dates when two adjacent players mix. A second three-player date and 12 more pair dates complete the block. A six-variable root and interval inequalities certify the continuation values and the incentive constraints. This theorem resolves the displayed four-player example. The existence question for arbitrary finite stochastic games remains open in this project. [Simon, *A Topological Approach to Quitting Games*](https://doi.org/10.1287/moor.1110.0524) · [Formal Conjectures #7957](https://github.com/google-deepmind/formal-conjectures/issues/7957)
 
-**Public review draft.** Bo Cowgill directed this investigation. OpenAI Codex was used in the Lean formalization. Human review of this draft is pending. [Read the proof](PROOF.md) · [Inspect the independent theorem statement](Challenge.lean) · [Inspect the Lean proof](PeriodicEquilibrium.lean)
+**Public review draft.** OpenAI Codex was used in the Lean formalization. [Read the proof](PROOF.md) · [Inspect the independent theorem statement](Challenge.lean) · [Inspect the Lean proof](PeriodicEquilibrium.lean)
 
 ## Game and payoff conventions
 
