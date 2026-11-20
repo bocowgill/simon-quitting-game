@@ -7,12 +7,17 @@ project:
     terminal Nash equilibrium and a uniform Cesàro equilibrium in the
     four-player quitting game for every live phase.
   authors: ["Bo Cowgill"]
+  responsible_maintainers: ["Bo Cowgill"]
   role: "substantive-development"
-  license: "NOASSERTION"  # Release licence for new material pending owner review.
+  license: "Apache-2.0"
 classification:
   arxiv: ["math.OC"]
   msc2020: ["91A15"]
 sources:
+  - title: "The 1,856-period equilibrium construction in Simon’s four-player quitting game"
+    type: "original-proof"
+    relationship: "other"
+    note: "This project presents the construction and its formal proof. Publication priority has not been established."
   - title: "A Topological Approach to Quitting Games"
     authors: ["Robert Samuel Simon"]
     id: "https://doi.org/10.1287/moor.1110.0524"
@@ -60,4 +65,4 @@ review:
     frozen 4.33.1 pin and the packaged 4.35.0 pin. An independent agent
     checked the faithful encoding of all unilateral deviations and the
     horizon quantifiers. Local Comparator accepted the exported statements. Con-ron and
-    Nanoda independently accepted the same Solution export. Human review of this draft and the licensing decision precede any Palomar submission.
+    Nanoda independently accepted the same Solution export. Independent human mathematical review has not been recorded.
