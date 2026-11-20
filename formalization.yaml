@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
 version: "v0.4"
 project:
-  name: "Periodic equilibria in Simon’s four-player quitting game"
+  name: "Periodic equilibrium in Simon’s four-player quitting game"
   description: >-
     One 1,856-period calendar of independently randomized moves is an exact
     terminal Nash equilibrium and a uniform Cesàro equilibrium in the
     four-player quitting game for every live phase.
-  authors: ["OpenAI Codex (AI-assisted research project)"]
+  authors: ["Bo Cowgill"]
   role: "substantive-development"
   license: "NOASSERTION"  # Release licence for new material pending owner review.
 classification:
@@ -44,7 +44,7 @@ automation:
       models: ["GPT-6"]
       framework: "OpenAI Codex"
       tool_setup: >-
-        GPT-6 Codex agents developed the mathematical reductions, the Lean
+        Bo Cowgill directed the investigation. GPT-6 Codex agents developed the mathematical reductions, the Lean
         proof, and the exact certificate computations. Lean 4 and Mathlib
         were used for kernel checks. The numeric inputs are checked in Lean through rational interval
         bounds and a fixed-point argument. Python also generated check data.
@@ -61,5 +61,4 @@ review:
     frozen 4.33.1 pin and the packaged 4.35.0 pin. An independent agent
     checked the faithful encoding of all unilateral deviations and the
     horizon quantifiers. Local Comparator accepted the exported statements. Con-ron and
-    Nanoda independently accepted the same Solution export. Public registration, human authorship,
-    responsible maintainer, and release licensing await owner review.
+    Nanoda independently accepted the same Solution export. Human review of this draft and the licensing decision precede any Palomar submission.

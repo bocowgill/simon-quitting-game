@@ -4,7 +4,13 @@
 
 The Lean theorem is `SimonHeadline.periodic_equilibrium`. Its proof constructs four successive 464-date blocks by rotating the players' roles. Each block begins with three players mixing on one date, followed by 450 dates when two adjacent players mix. A second three-player date and 12 more pair dates complete the block. A six-variable root and interval inequalities certify the continuation values and the incentive constraints. This theorem resolves the displayed four-player example. The existence question for arbitrary finite stochastic games remains open in this project. [Simon, *A Topological Approach to Quitting Games*](https://doi.org/10.1287/moor.1110.0524) · [Formal Conjectures #7957](https://github.com/google-deepmind/formal-conjectures/issues/7957)
 
-**Public review draft.** The proof and Lean development were produced with OpenAI Codex. Human review is pending. [Read the proof](PROOF.md) · [Inspect the independent theorem statement](Challenge.lean) · [Inspect the Lean proof](PeriodicEquilibrium.lean)
+**Public review draft.** Bo Cowgill directed this investigation. OpenAI Codex developed the equilibrium construction and the Lean proofs. Human review of this draft is pending. [Read the proof](PROOF.md) · [Inspect the independent theorem statement](Challenge.lean) · [Inspect the Lean proof](PeriodicEquilibrium.lean)
+
+## How to cite this work
+
+Cowgill, Bo. 2026. *Periodic equilibrium in Simon’s four-player quitting game*. Research software and proof note, November 20. [GitHub repository](https://github.com/bocowgill/simon-quitting-game).
+
+Please cite this project for the equilibrium construction and Lean proof, and include the commit you used. For the original game, cite Robert S. Simon, “A Topological Approach to Quitting Games.” [Citation metadata](CITATION.cff) · [Simon’s paper](https://doi.org/10.1287/moor.1110.0524)
 
 ## Game and payoff conventions
 
@@ -28,7 +34,7 @@ lake comparator --config comparator.json
 
 The frozen research replay uses Lean 4.33.1 and Mathlib commit `0df444a360eaa60ab8c11dca51a86af692955474`. The unconditional theorem passed that replay. Its transitive axioms are `propext`, `Classical.choice`, and `Quot.sound`. The sole deliberate placeholder in `Challenge.lean` states the goal for Comparator. The solution proves it from the finite calendar construction, root certificate, and all incentive inequalities. The optional target `lake build PeriodicEquilibriumFC` proves the same existence result directly for the frozen public-history stochastic-game trajectory model. The companion passed at both toolchain pins. Its four vendored FC source files match the frozen commit byte for byte. One emits four deprecation warnings at the newer pin. [Unconditional theorem](PeriodicEquilibrium.lean) · [Root certificate](SimonRoot.lean) · [Inactive inequalities](ConcreteInactive.lean)
 
-A second replay on the pinned stable Lean 4.35.0 checked the full transitive solution closure and the same three axioms. Lake resolved every local source in a scratch project with compilation disabled. The metadata records Codex’s role. Human attribution and licensing for the new material are pending review. The four vendored FC definitions retain their original [Apache-2.0 licence](FormalConjecturesForMathlib/LICENSE). Registration requires a public repository and an immutable commit. [Palomar submission requirements](https://palomar-registry.org/how-to-submit)
+A second replay on the pinned stable Lean 4.35.0 checked the full transitive solution closure and the same three axioms. Lake resolved every local source in a scratch project with compilation disabled. The metadata records Codex’s role. Licensing for the new material is pending review. The four vendored FC definitions retain their original [Apache-2.0 licence](FormalConjecturesForMathlib/LICENSE). Registration requires a public repository and an immutable commit. [Palomar submission requirements](https://palomar-registry.org/how-to-submit)
 
 ## Local comparison of the release
 
